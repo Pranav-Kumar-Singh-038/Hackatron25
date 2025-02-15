@@ -37,18 +37,17 @@ const index = () => {
       <Wihts />
       {/* <Journey /> */}
       <Glimpse />
-      {/* <Venue /> */}
+      <Venue />
       {/* <Schedule /> */}
       {/* <Prize /> */}
       {/* <Trakcs /> */}
       {/* <Tracks /> */}
-      <Sponsor />
+      <Sponsor />                                                                                                                                                                                                                                                                                                                                                                                                                       
       {/* <WhySponsor /> */}
       <Testimonies />
-      {/* <Organiser /> */}
-      // <PastSpeakersNJudges />
+      {/* <Organiser /> */}                                                       
       {/* <Team /> */}
-      <PreviousProblem/>
+      {/*<PreviousProblem/>*/}
       <FAQS />
     </Layout>
   );

@@ -41,9 +41,16 @@ const Sponsor = () => {
       <SectionLayout
         Classname={"sponsor-section"}
         Title={"OUR SPONSORS"}
+        
         id="sponsors"
       >
         <div className="sponsor-container">
+            <br/>
+          <div className="GoldContainer">
+            <hr className="GoldText"></hr>
+            <h1 className="Goldt"> GOLD </h1>
+            <hr className="GoldTextp"></hr>
+          </div>
           {/* <SponsorContainer
           Name={diamond.Name}
           Img={diamond.Img}
@@ -178,6 +185,29 @@ const Sponsor = () => {
             ))}
           </SponsorContainer>
         </div> */}
+
+
+            <SponsorContainer
+              Name={"inkind"}
+              Img={communityPartner.Img}
+              Type={"PARTNERS"}
+              
+            >
+              {Allsponsor.PRTNR.map((sponsor) => (
+                <SponsorWrapper
+                  
+                  key={sponsor.id}
+                  Name={sponsor.Name}
+                  Img={sponsor.Img}
+                  Link={sponsor.Link}
+                />
+              ))}
+            </SponsorContainer>
+            <div className="GoldContainer">
+          <hr className="SilverText"></hr>
+          <h1 style={{fontSize: "40px"}}> SILVER </h1>
+          <hr className="SilverTextp"></hr>
+          </div>
           <SponsorContainer
             Name={"inkind"}
             Img={communityPartner.Img}
@@ -192,24 +222,13 @@ const Sponsor = () => {
               />
             ))}
           </SponsorContainer>
+        
+          
+            
+            
+          
         </div>
-      </SectionLayout>
-      <SectionLayout Classname={"sponsor-section"} Title={"COMMUNITY PARTNERS"}>
-        <SponsorContainer
-          Name={"inkind"}
-          Img={communityPartner.Img}
-          Type={"PARTNERS"}
-        >
-          {Allsponsor.PRTNR.map((sponsor) => (
-            <SponsorWrapper
-              key={sponsor.id}
-              Name={sponsor.Name}
-              Img={sponsor.Img}
-              Link={sponsor.Link}
-            />
-          ))}
-        </SponsorContainer>
-      </SectionLayout>
+          </SectionLayout>
     </>
   );
 };

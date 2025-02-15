@@ -110,10 +110,10 @@ export const StyledButton = styled.button`
         box-shadow: 0 0 25px rgba(255, 20, 147, 0.9);
     }
 
-    @media (max-width: 1024px) {
-        width: 240px;
-        height: 58px;
-        font-size: 1.3rem;
+    @media (min-width: 1024px) {
+        width: 370px;
+        height: 65px;
+        font-size: 1.7rem;
     }
 
     @media (max-width: 768px) {

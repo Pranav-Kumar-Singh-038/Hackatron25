@@ -37,6 +37,8 @@ export const Allsponsor = {
       Link: "https://azure.microsoft.com/en-us/",
     }
   ],
+
+  
   PRTNR: [
     {
       id: "1",

@@ -7,26 +7,28 @@ import Telescope from "../utils/Telescope.json";
 
 const Navbar = () => {
   return (
-    <nav>
-      <div className="desktop-nav">
-        <div className="left-heading nav-sponsor">
-          <div className="letter-container">
-            <p>Eastern </p>
-            <p>INDIA’S</p>
-          </div>
-          <div className="letter-container">
-            <p>BIGGEST </p>
-            <p>HACKATHON</p>
-          </div>
-        </div>
-
-        <div className="nav-sponsor">
-          <Link href="" target="">
-            Sponsor Us
-          </Link>
-        </div>
+    <div className="navbar">
+      <div className="logo">
+        <a href="#home">
+          <img src="/images/logo/hncc.png" alt="Hackatron" />
+        </a>
       </div>
-    </nav>
+      <ul className="nav-links">
+        <li className="nav-btn"><a href="#home">HOME</a></li>
+        <li className="nav-btn"><a href="#about">ABOUT</a></li>
+        <li className="nav-btn"><a href="#venue">VENUE</a></li>
+        <li className="nav-btn"><a href="#schedule">SCHEDULE</a></li>
+        <li className="nav-btn"><a href="#prizes">PRIZES</a></li>
+        <li className="nav-btn"><a href="#sponsors">SPONSORS</a></li>
+        <li className="nav-btn"><a href="#faqs">FAQS</a></li>
+        <li className="nav-btn"><a href="#contact">CONTACT</a></li>
+      </ul>
+      <div className="logo1">
+        <a href="#home">
+          <img src="/images/logo/hackatron.png" alt="Hackatron" />
+        </a>
+      </div>
+    </div>
   );
 };
 

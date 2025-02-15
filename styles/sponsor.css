@@ -67,14 +67,14 @@
   left: -300px;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(172, 26, 26, 0.3);
   transform: skewX(-30deg);
   transition: 0.4s;
 }
 
 .sponsor-section .sponsor .wrapper .card:hover::before {
   left: 230px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(146, 13, 13, 0.2);
 }
 
 .sponsor-section .sponsor.diamond .wrapper .card::after,
@@ -395,4 +395,66 @@
     width: 80px;
     height: 20px;
   }
+}
+
+
+
+.GoldText{
+  left:21%;
+  width: 20%;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  opacity: .4;
+}
+.SilverText{
+  left:21%;
+  width: 20%;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  opacity: .4;
+}
+.GoldTextp{
+  right: 21%;
+  width: 20%;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  opacity: .4;
+}
+.SilverTextp{
+  right: 21%;
+  width: 20%;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  opacity: .4;
+}
+
+@media only screen and (max-width: 768px) {
+  .GoldText {
+      left: 3%;
+  }
+  .Goldt{
+    font-size: 30px;
+  }
+  .GoldTextp {
+    right: 3%;
+  }
+  .SilverText {
+    left: 3%;
+}
+.SilverTextp {
+  right: 3%;
+  }
+}
+
+.Goldt{
+  font-size: 40px;
+}
+
+.GoldContainer{
+  position: relative;
+  text-align: center;
 }

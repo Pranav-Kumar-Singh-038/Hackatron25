@@ -70,3 +70,25 @@ a {
   background: #d1e5ff;
   ;
 } */
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #a855f7;
+}
+
