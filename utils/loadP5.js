@@ -1,31 +1,51 @@
 const loadP5 = async (p5ContainerRef) => {
   const p5 = await import("p5");
+
   new p5.default((sketch) => {
-    let containerHeight = document.getElementById("myCanvas").offsetHeight;
-    let containerWidth = document.getElementById("myCanvas").offsetWidth;
+    let container = document.querySelector(".container");
+    if (!container) {
+      console.error("Error: .container not found!");
+      return;
+    }
 
-    let leftContainerTop =
-      document.querySelector(".time-container-left").offsetTop + 80;
-    let rightContainerTop =
-      document.querySelector(".time-container-right").offsetTop + 80;
-    let leftContainerLeft =
-      document.querySelector(".time-container-left").offsetLeft + 50;
+    let containerHeight = container.clientHeight;
+    let containerWidth = container.clientWidth;
 
-    let Height = rightContainerTop - leftContainerTop;
-    let Width = document.querySelector(".time-container-left").offsetWidth;
-    let noOfLeftToRight = 6;
-    let noOfRightToLeft = 5;
+    let leftContainerTop, rightContainerTop, leftContainerLeft;
+    let Height, Width;
+
+    const noOfLeftToRight = 9;  // Adjusted based on your data
+    const noOfRightToLeft = 8;  // Adjusted based on your data
+
+    const updateDimensions = () => {
+      containerHeight = container.clientHeight;
+      containerWidth = container.clientWidth;
+
+      leftContainerTop =
+        document.querySelector(".time-container-left").offsetTop + 80;
+      rightContainerTop =
+        document.querySelector(".time-container-right").offsetTop + 80;
+      leftContainerLeft =
+        document.querySelector(".time-container-left").offsetLeft + 50;
+
+      Height = rightContainerTop - leftContainerTop;
+      Width = document.querySelector(".time-container-left").offsetWidth;
+    };
 
     sketch.setup = () => {
-      sketch.createCanvas(containerWidth, containerHeight);
+      updateDimensions();
+      sketch.createCanvas(containerWidth, containerHeight).parent(
+        p5ContainerRef.current
+      );
       sketch.stroke(255);
       sketch.strokeWeight(2);
       sketch.noFill();
     };
 
     sketch.draw = () => {
-      sketch.background(0);
-      sketch.setLineDash([8, 8]);
+      sketch.clear();
+      sketch.setLineDash([8, 8]); // Keep dashed line
+
       sketch.curve(
         leftContainerLeft,
         rightContainerTop,
@@ -76,34 +96,23 @@ const loadP5 = async (p5ContainerRef) => {
     };
 
     sketch.windowResized = () => {
-      containerHeight = document.getElementById("myCanvas").offsetHeight;
-      containerWidth = document.getElementById("myCanvas").offsetWidth;
-
-      if (containerWidth > 653) {
-        leftContainerTop =
-          document.querySelector(".time-container-left").offsetTop + 80;
-        rightContainerTop =
-          document.querySelector(".time-container-right").offsetTop + 80;
-        leftContainerLeft =
-          document.querySelector(".time-container-left").offsetLeft + 50;
-      } else {
-        leftContainerTop =
-          document.querySelector(".time-container-left").offsetTop + 60;
-        rightContainerTop =
-          document.querySelector(".time-container-right").offsetTop + 60;
-        leftContainerLeft =
-          document.querySelector(".time-container-left").offsetLeft + 35;
-      }
-      Height = rightContainerTop - leftContainerTop;
-      Width = document.querySelector(".time-container-left").offsetWidth;
-
+      updateDimensions();
       sketch.resizeCanvas(containerWidth, containerHeight);
     };
+
+    window.addEventListener("scroll", () => {
+      updateDimensions();
+      sketch.redraw();
+    });
+
+    container.addEventListener("wheel", (event) => {
+      event.stopPropagation(); // Keeps scroll smooth
+    });
 
     sketch.setLineDash = (list) => {
       sketch.drawingContext.setLineDash(list);
     };
-  }, p5ContainerRef.current);
+  });
 };
 
 export default loadP5;

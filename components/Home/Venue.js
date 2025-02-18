@@ -9,12 +9,11 @@ const Venue = () => {
       Classname={"venue-section-container"}
     >
       <div className="venue-section">
-        <div className="venue-wrapper">
+        <div className=" venue-wrapper">
           <div className="venue">
             <h2>Venue</h2>
             <p>
-              BIT Sindri Campus, Dhanbad
-              <br />
+              BIT Sindri Campus, Dhanbad,
               Jharkhand
             </p>
           </div>
@@ -23,7 +22,7 @@ const Venue = () => {
             <p>
               13th April 2025
               <br />
-              8 AM Onwards
+              8:00 AM Onwards
             </p>
           </div>
           <div className="extra-info">
@@ -34,6 +33,9 @@ const Venue = () => {
             </p>
           </div>
         </div>
+
+
+
         <div className="divider"></div>
 
         <div className="map-wrapper">
@@ -48,17 +50,17 @@ const Venue = () => {
           ></iframe>
         </div>
       </div>
-      <div className="aconst6">
-        <Image
-          src="/images/aconst6.svg"
-          alt="Hackatron const"
-          className="opaque8"
-          width={300}
-          height={300}
-        />
-      </div>
+      
     </SectionLayout>
   );
 };
 
 export default Venue;
+
+
+
+
+
+
+  
+

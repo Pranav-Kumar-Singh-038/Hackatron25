@@ -1,0 +1,16 @@
+Revert "Removed: Unwanted Star Image from Venue Section"
+
+This reverts commit ca00065706a29cafa440d04a909d0cc738a83aa9.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch and 'origin/main' have diverged,
+# and have 1 and 7 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# Changes to be committed:
+#	modified:   components/Home/Venue.js
+#	modified:   styles/navbar.css
+#

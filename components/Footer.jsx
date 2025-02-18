@@ -6,12 +6,18 @@ const Footer = () => {
     <>
       <footer id="contact" className="footer-section" style={{ color: "#fff" }}>
         <div className="imgHolder">
-            <Link href="/">
-              <img src="/images/logo/hackatron.png" alt="Hackatron" />
-            </Link>
+        <Link href="/">
+              <img src="/images/logo/BIT-Sindri-LOGO.png" alt="Hackatron" style={{ width: "100px", height: "auto" }}  />
+        </Link>
+            
             <Link href="https://www.hnccbits.com/">
-              <img src="/images/logo/hncc.png" alt="Hackatron" />
-            </Link>          
+              <img src="/images/logo/hncc.png" alt="Hackatron" style={{ width: "100px", height: "auto", paddingLeft: "20px"}} />
+            </Link> 
+            <Link href="/">
+              <img src="/images/logo/hackatron.png" alt="Hackatron" style={{ width: "148px", height: "auto" , paddingLeft: "20px"}}  />
+        </Link>
+            
+                     
         </div>
         <div className="docs">
           <h3 className="footer-title">Explore</h3>

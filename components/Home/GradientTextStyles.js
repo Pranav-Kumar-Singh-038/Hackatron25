@@ -8,18 +8,6 @@ const fadeEffect = keyframes`
     75% { opacity: 0.8; transform: translateY(-5px); }
 `;
 
-// Button Gradient Animation
-const buttonAnimation = keyframes`
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-`;
-// const arrowani = keyframes`
-//     10%{
-//         transform: translateY(7px);
-//     }
-// `;
-
 // Color Palette for Theme Consistency
 export const titleWords = [
   { text: "DESIGN.", startColor: "#A020F0", endColor: "#8A2BE2", delay: "0s" },
@@ -85,56 +73,3 @@ export const VenueText = styled.p`
         font-size: 1.2rem;
     }
 `;
-
-// Styled Button with Responsive Design
-export const StyledButton = styled.button`
-    position: relative;
-    width: 280px;
-    height: 64px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    color: #fff;
-    border-radius: 12px;
-    background: linear-gradient(-45deg, #A020F0, #8A2BE2, #DDA0DD, #FF00FF);
-    background-size: 300% 300%;
-    animation: ${buttonAnimation} 4s ease infinite;
-    box-shadow: 0 0 20px rgba(138, 43, 226, 0.8);
-    transition: all 0.4s ease-in-out;
-
-    &:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 25px rgba(255, 20, 147, 0.9);
-    }
-
-    @media (min-width: 1024px) {
-        width: 370px;
-        height: 65px;
-        font-size: 1.7rem;
-    }
-
-    @media (max-width: 768px) {
-        width: 220px;
-        height: 54px;
-        font-size: 1.2rem;
-    }
-
-    @media (max-width: 480px) {
-        width: 200px;
-        height: 50px;
-        font-size: 1.1rem;
-    }
-`;
-
-export const cont = styled.div`
-    top: 5px;
-    left: 5px;
-    transform: translate(-5px, -5px);
-`;
-
-// export const imga=styled.img`
-//     animation : ${arrowani} 3s easse out infinite
-// `;

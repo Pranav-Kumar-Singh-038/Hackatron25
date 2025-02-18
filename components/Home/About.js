@@ -2,6 +2,7 @@ import { infoConfig } from "../../config/info";
 import React from "react";
 import Image from "next/image";
 
+
 const About = () => {
   const { about } = infoConfig;
   return (
@@ -35,8 +36,6 @@ const About = () => {
           </div>
         </div>
       </div>
-     
-
       <div className="pattern7">
         <Image
           src="/images\Constillations\Moon.svg"

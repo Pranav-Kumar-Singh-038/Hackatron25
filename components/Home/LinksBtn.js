@@ -1,28 +1,34 @@
-import Image from "next/image";
+import { useEffect } from "react";
 
-const DevfolioBtn = () => {
+const LinksBtn = () => {
+  useEffect(() => {
+    if (!document.querySelector('script[src="https://apply.devfolio.co/v2/sdk.js"]')) {
+      const script = document.createElement("script");
+      script.src = "https://apply.devfolio.co/v2/sdk.js";
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+
+      script.onload = () => {
+        console.log("Devfolio SDK Loaded");
+      };
+
+      return () => {
+        document.body.removeChild(script);
+      };
+    }
+  }, []);
+
   return (
     <div className="butHolder">
-      <button type="button" className="Btn zinc-bg">
-        {
-          <a href="" target="">
-            <div className="gradient-mask black-bg"></div>
-
-            <Image
-              src="/images/icons/edit.png"
-              alt="edit"
-              className="ionicon icon"
-              width={20}
-              height={20}
-              style={{ filter: "invert(1)" }}
-            />
-
-            <span className="text">Register Now</span>
-          </a>
-        }
-      </button>
+      <div
+        className="apply-button"
+        data-hackathon-slug="hackatron-3"
+        data-button-theme="light"
+        style={{ height: "44px", width: "312px" }}
+      />
     </div>
   );
 };
 
-export default DevfolioBtn;
+export default LinksBtn;

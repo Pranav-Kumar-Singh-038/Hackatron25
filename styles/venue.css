@@ -20,11 +20,15 @@
   opacity: 0.8;
 }
 .venue-section .venue-wrapper {
+  border-radius: 86px;
+  border-color: transparent;
+  background-color: var(--transparent-gray);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1.2rem;
+  padding: 60px;
 }
 
 .venue-section h2 {
@@ -71,11 +75,12 @@
 
   .venue-section .venue-wrapper {
     width: 40%;
-    align-items: flex-end;
+    align-items: center;
   }
 
   .venue-section .venue-wrapper .extra-info {
     width: 75%;
+    align-items: center;
   }
 
   .venue-section h2 {
@@ -121,4 +126,14 @@
   .venue-section p {
     font-size: 1rem;
   }
+}
+
+.date, .extra-info, .venue {
+  display: flex !important;
+  width: 100% !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+
 }

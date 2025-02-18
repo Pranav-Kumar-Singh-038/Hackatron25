@@ -99,8 +99,29 @@
 }
 
 .butHolder {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem; 
+  width: 100%;
+  cursor: pointer;
 }
+
+.butHolder iframe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 312px; 
+  height: 44px; 
+}
+
+@media (max-width: 480px) {
+  .butHolder {
+    margin-top: 0.8rem;
+  }
+}
+
+
 
 .venue-text {
   font-size: 1.8rem;
@@ -377,6 +398,10 @@ iframe button {
   }
   .sec-text {
     font-size: 1.4rem;
+  }
+  
+  .butHolder {
+    margin-top: 1rem; 
   }
 }
 

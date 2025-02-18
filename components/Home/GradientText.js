@@ -2,6 +2,7 @@ import React from "react";
 import { TextContainer, WordGradient, VenueText, StyledButton, titleWords, cont, imga } from "./GradientTextStyles.js";
 import { height } from "@fortawesome/free-brands-svg-icons/fa42Group";
 import styled, { keyframes } from "styled-components";
+// import RegisterSection from "./RegisterSection.js";
 
 
 
@@ -31,18 +32,9 @@ const GradientText = () => {
       </TextContainer>
       </div>
 
-      <VenueText>
-        BIT SINDRI-DHANBAD <br />
-        JHARKHAND, INDIA
-      </VenueText>
+     
         
-        
-      <div className="RegBut" style={{textAlign: "center", marginTop: "25px", display: "flex"}}>
-        <StyledButton>Register Now</StyledButton>
-        <div className="Arrow">
-          <img className ="imga" src="images/arrow.png" alt="" />
-        </div>
-      </div>
+      {/* <RegisterSection/> */}
     </>
   );
 };
